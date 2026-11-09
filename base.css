@@ -1,0 +1,192 @@
+/* 新开传奇网站 - 仿36uc.com门户布局 v8 */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:#f2f3f5;color:#333;line-height:1.7;font-size:14px}
+a{color:#333;text-decoration:none;transition:color .2s}
+a:hover{color:#c8161d}
+.wrap{max-width:1200px;margin:0 auto;padding:0 12px}
+img{max-width:100%}
+h1,h2,h3{font-weight:700;color:#222}
+ul{list-style:none}
+
+/* 顶部栏 */
+.topbar{background:#fff;border-bottom:3px solid #c8161d}
+.head-main{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;flex-direction:column;line-height:1.15;text-decoration:none}
+.logo-cn{font-size:24px;font-weight:900;color:#c8161d;letter-spacing:3px}
+.logo-en{font-size:10px;color:#bbb;letter-spacing:4px;margin-top:2px}
+.head-search{display:flex;width:280px}
+.search-input{flex:1;border:2px solid #c8161d;height:32px;padding:0 12px;border-radius:4px 0 0 4px;outline:none;font-size:14px}
+.search-btn{background:#c8161d;color:#fff;border:none;padding:0 18px;height:32px;cursor:pointer;border-radius:0 4px 4px 0;font-size:14px;font-weight:600}
+
+/* 导航 - 居中 */
+.head-nav{background:#c8161d;text-align:center}
+.head-nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap}
+.head-nav a{display:inline-block;padding:0 26px;height:40px;line-height:40px;color:#fff;font-size:15px;text-decoration:none}
+.head-nav a:hover{background:#9e1015;color:#fff}
+.head-nav a.active{background:#9e1015;font-weight:700}
+
+/* 公告 */
+.notice{background:#fff8e8;border:1px solid #f0d890;border-radius:4px;margin-top:10px;padding:7px 14px;display:flex;align-items:center}
+.ico-notice{background:#c8161d;color:#fff;padding:2px 10px;border-radius:3px;font-style:normal;font-size:12px;margin-right:12px;white-space:nowrap;font-weight:600}
+.notice-list{display:flex;flex-wrap:wrap;gap:24px;color:#8a6d3b;font-size:13px}
+
+/* 面包屑 */
+.crumb{padding:8px 0;color:#888;font-size:13px}
+.crumb a{color:#666}
+.crumb span{color:#c8161d}
+
+/* ========== 焦点图区域 ========== */
+.focus{display:flex;gap:10px;margin-top:10px;align-items:stretch}
+.focus-main{flex:1;position:relative;overflow:hidden;border-radius:6px;height:140px;background:#222}
+.focus-list{position:relative;width:100%;height:100%}
+.focus-slide{position:absolute;inset:0;opacity:0;transition:opacity .5s}
+.focus-slide.active{opacity:1}
+.ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.6);background-size:cover;background-position:center}
+.p1{background:linear-gradient(135deg,#7a1f1f,#c8161d)}
+.p2{background:linear-gradient(135deg,#1a3f5f,#2e75b6)}
+.p3{background:linear-gradient(135deg,#4a2d75,#8e44ad)}
+.p4{background:linear-gradient(135deg,#17573f,#27ae60)}
+.p5{background:linear-gradient(135deg,#8a6d1f,#d4a017)}
+.p6{background:linear-gradient(135deg,#5a1f4a,#c0392b)}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:10px 16px 8px;background:linear-gradient(to top,rgba(0,0,0,.85),transparent)}
+.cap b{display:block;font-size:16px;line-height:1.4;margin-bottom:2px}
+.cap span{color:#ddd;font-size:11px}
+
+/* 焦点图圆点 */
+.focus-dots{position:absolute;bottom:6px;right:10px;display:flex;gap:4px;z-index:10}
+.focus-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:all .3s}
+.focus-dot.active{background:#fff;transform:scale(1.3)}
+
+/* 焦点侧栏 - 今日开服时间（正常高度，内容全部展示） */
+.focus-side{width:300px;flex-shrink:0}
+.focus-side .block{margin:0;height:140px;overflow:hidden;border-radius:6px}
+.focus-side .block-hd{padding:7px 12px}
+.focus-side .block-hd h2{font-size:14px}
+.focus-side .block-bd{padding:0 12px}
+
+/* 开服时间表格 - 紧凑但完整展示 */
+.kf-table{width:100%;border-collapse:collapse;font-size:12px}
+.kf-table thead th{background:#fafafa;padding:4px 3px;text-align:left;color:#999;font-weight:600;font-size:11px;border-bottom:1px solid #eee}
+.kf-table tbody td{padding:3px 3px;border-bottom:1px solid #f7f7f7;font-size:11px;color:#444}
+.kf-table tbody tr:last-child td{border-bottom:none}
+.kf-table tbody td:first-child{color:#c8161d;font-weight:700;white-space:nowrap}
+.kf-table tbody td a{color:#333;font-size:11px}
+.kf-table tbody td a:hover{color:#c8161d}
+.kf-table tbody td:last-child a{display:inline-block;background:#f0f5ff;color:#2e75b6;padding:0 4px;border-radius:2px;font-size:10px}
+
+/* 通用区块 */
+.block{background:#fff;border-radius:6px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.block-hd{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid #f0f0f0}
+.block-hd h2{font-size:15px;color:#222;position:relative;padding-left:11px}
+.block-hd h2::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:#c8161d;border-radius:2px}
+.block-hd h2 a{color:#222}
+.block-hd h2 a:hover{color:#c8161d}
+.block-hd .more{color:#999;font-size:12px}
+.block-hd .more:hover{color:#c8161d}
+.block-bd{padding:10px 14px}
+
+/* 排名列表 */
+.rank-list li{display:flex;align-items:center;padding:5px 0;border-bottom:1px dashed #eee}
+.rank-list li:last-child{border-bottom:none}
+.rank-num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:3px;background:#f0f0f0;color:#666;font-size:11px;font-weight:700;margin-right:7px;flex-shrink:0}
+.rank-list li.top .rank-num{background:#c8161d;color:#fff}
+.rank-list li.top2 .rank-num{background:#e8830c;color:#fff}
+.rank-list li.top3 .rank-num{background:#2e75b6;color:#fff}
+.rank-list .rt{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank-list .rt a{font-size:13px}
+.hot{display:inline-block;background:#c8161d;color:#fff;font-size:9px;padding:0 3px;border-radius:2px;margin-left:4px;flex-shrink:0}
+
+/* 开服列表 - 无缩略图纯文字 */
+.kaifu-list li{display:flex;align-items:center;padding:7px 0;border-bottom:1px dashed #eee}
+.kaifu-list li:last-child{border-bottom:none}
+.kaifu-list .kf-time{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:20px;background:#f5f5f5;color:#c8161d;font-size:11px;font-weight:600;margin-right:8px;flex-shrink:0;border-radius:2px}
+.kaifu-list .kf-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}
+.kaifu-list .kf-name a:hover{color:#c8161d}
+.kaifu-list .kf-tag{font-size:9px;padding:1px 4px;border-radius:2px;margin-left:6px;flex-shrink:0;background:#e8f4fd;color:#2e75b6}
+
+/* 新闻列表 */
+.list-news li{display:flex;align-items:center;padding:6px 0;border-bottom:1px dashed #eee}
+.list-news li:last-child{border-bottom:none}
+.list-news li i{display:inline-block;background:#f0f0f0;color:#c8161d;font-size:10px;padding:0 5px;border-radius:2px;margin-right:7px;font-style:normal;flex-shrink:0}
+.list-news li a{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}
+.list-news li time{color:#999;font-size:11px;margin-left:7px;flex-shrink:0}
+.list-news.big li{padding:8px 0}
+.list-news.big li a{font-size:14px}
+
+/* 主布局 */
+.lay-main{display:flex;gap:14px;margin-top:12px}
+.col-left{flex:1;min-width:0}
+.col-right{width:260px;flex-shrink:0}
+
+/* 文章详情页 */
+.article-box{background:#fff;border-radius:6px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.article-box h1{font-size:22px;line-height:1.4;text-align:center;margin-bottom:14px;color:#222}
+.article-info{text-align:center;color:#999;font-size:13px;padding-bottom:14px;border-bottom:1px solid #eee;margin-bottom:18px}
+.article-info span{margin:0 8px}
+.article-content{font-size:15px;line-height:2;color:#333}
+.article-content h2{font-size:18px;color:#c8161d;margin:22px 0 10px;padding-left:12px;border-left:4px solid #c8161d}
+.article-content p{margin-bottom:12px;text-indent:2em}
+.article-content ul{margin:10px 0 14px 2em;list-style:disc}
+.article-content ul li{margin-bottom:6px}
+.article-content ol{margin:10px 0 14px 2em;list-style:decimal}
+.article-content ol li{margin-bottom:6px}
+.article-content strong{color:#c8161d}
+.art-tags{padding:14px 0;border-top:1px solid #eee;margin-top:22px}
+.art-tags a{display:inline-block;background:#f5f5f5;color:#666;padding:3px 12px;border-radius:3px;margin:0 6px 6px 0;font-size:13px}
+.art-tags a:hover{background:#c8161d;color:#fff}
+
+/* 分页 */
+.pager{display:flex;gap:12px;align-items:center}
+.pager a{background:#f5f5f5;padding:6px 16px;border-radius:3px;font-size:14px}
+.pager a:hover{background:#c8161d;color:#fff}
+
+/* 相关文章 */
+.art-rel{background:#fff;border-radius:6px;padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.art-rel h4{font-size:16px;color:#222;margin-bottom:10px;padding-left:10px;border-left:4px solid #c8161d}
+.art-rel ul li{padding:6px 0;border-bottom:1px dashed #eee}
+.art-rel ul li:last-child{border-bottom:none}
+.art-rel ul li a{font-size:14px}
+
+/* 栏目页 */
+.cat-hd{background:#fff;border-radius:6px;padding:20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.cat-hd h1{font-size:20px;margin-bottom:8px}
+.cat-hd small{font-size:13px;color:#999;font-weight:400;margin-left:10px}
+.cat-hd p{color:#666;font-size:14px;line-height:1.8}
+
+/* 标签云 */
+.foot-tags a{display:inline-block;background:#f5f5f5;color:#666;padding:3px 10px;border-radius:3px;margin:3px;font-size:13px}
+.foot-tags a:hover{background:#c8161d;color:#fff}
+
+/* 底部 */
+.footer{background:#2c2c2c;margin-top:24px;padding-top:24px}
+.foot-main{display:flex;gap:40px;padding-bottom:20px}
+.foot-col{flex:1}
+.foot-col h4{color:#fff;font-size:15px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #444}
+.foot-col ul li{padding:4px 0}
+.foot-col ul li a{color:#aaa;font-size:13px}
+.foot-col ul li a:hover{color:#c8161d}
+.foot-about{color:#aaa;font-size:13px;line-height:1.8}
+.copyright{background:#1f1f1f;padding:16px 0;text-align:center;color:#888;font-size:12px}
+.copyright p{margin:4px 0}
+.foot-disclaim{color:#666;font-size:11px}
+
+/* 响应式 */
+@media (max-width:980px){
+  .focus{flex-direction:column}
+  .focus-side{width:100%}
+  .focus-side .block{height:auto;min-height:180px}
+  .lay-main{flex-direction:column}
+  .col-right{width:100%}
+  .head-search{width:200px}
+  .logo-cn{font-size:20px}
+  .head-nav a{padding:0 12px}
+  .focus-main{height:120px}
+}
+@media (max-width:640px){
+  .head-search{display:none}
+  .head-nav a{padding:0 7px;font-size:13px;height:38px;line-height:38px}
+  .foot-main{flex-direction:column;gap:20px}
+  .article-box{padding:14px}
+  .article-box h1{font-size:18px}
+  .focus-main{height:100px}
+}
